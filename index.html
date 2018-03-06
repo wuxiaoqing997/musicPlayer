@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+        <link rel="stylesheet" type="text/css" href="css/prism.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+ <div id="wapper">
+        <div class="pic">
+            <img src="img/hand.png" id="hand">
+            <div id="rotate">
+                <img src="img/music.png" id="music">
+                <img src="music_pic/0.jpg" id="head" data-pic='0' class="picture-size">
+            </div>
+        </div>
+        <div id="control">
+            <div id="song">
+                <span id="name">不二臣</span>
+                <br>
+                <span id="album">专辑：
+            </span>
+                <span id="from">不二臣</span>
+                <span id="singer">歌手：</span>
+                <span id="author">徐秉龙</span>
+            </div>
+            <div id="panel">
+                <i class="fa fa-backward fa-2x" aria-hidden="true" id="pre"></i>
+                <i class="fa fa-play fa-4x" aria-hidden="true" id="on" data-statu='1'></i>
+                <i class="fa fa-forward fa-2x" aria-hidden="true" id="back"></i>
+                <div id="queue">
+                    <i class="fa fa-bars active" aria-hidden="true" id="list"></i>
+                    <i class="fa fa-random normal" aria-hidden="true" id="random"></i>
+                    <i class="fa fa-refresh normal" aria-hidden="true" id="recycle"></i>
+                </div>
+            </div>
+            <div id="vioce_bk"></div>
+            <div id="vioce_pro"></div>
+            <i class="fa fa-volume-up" aria-hidden="true" id="vio"></i>
+            <i class="fa fa-minus" aria-hidden="true" id="minus" ></i>
+            <i class="fa fa-plus" aria-hidden="true" id="add"></i>
+            <span id="current">00:00</span>
+            <div id="progress_bk">
+                <div id="progress"></div>
+            </div>
+            <span id="time">3:40</span>
+        </div>
+    </div>
+    <audio id='id-audio-player' controls="controls" src="music/徐秉龙 - 不二臣.mp3" style="visibility: none;" data-num='0'></audio >
+        <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script>
+        if (typeof module === 'object') {
+            window.jQuery = window.$ = module.exports;
+        };
+        </script>
+        <script type="text/javascript" src="js/prism.js"></script>
+        <script type="text/javascript" src="js/quietflow.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("body").quietflow({
+                theme: "starfield"
+            })
+        })
+        </script>
+    </body>
+
+</html>
