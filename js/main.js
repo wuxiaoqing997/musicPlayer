@@ -175,16 +175,16 @@ function autoNext() {
     bindEvent(a, 'ended', function() {
         log('autoNext')
         let pic = e('#head')
-        let num = a.dataset.num
+        let num = Number(a.dataset.num)
         let len = musicList.length
-        if (num > len) {
+        if (num == len - 1) {
         	a.src = musicList[0].src
         	a.dataset.num = 0
         	num = 0
         }
         else{
-	        a.src = musicList[(num + 1) % musicList.length].src
-	        a.dataset.num = (num + 1) % musicList.length
+	        a.src = musicList[(num + 1) ].src
+	        a.dataset.num = (num + 1)
 	        num = a.dataset.num
         }
         pic.src = musicList[num].pic
@@ -267,6 +267,7 @@ function main(){
 	pauseOrPlay()
 	changeMusic()
 	playModel()
+	autoNext()
 	changeVolume()
 }
 main()
