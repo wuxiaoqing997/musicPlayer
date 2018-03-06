@@ -256,6 +256,7 @@ function playModel(){
         bindEvent(a, 'ended', function() {
         	a.src = musicList[num].src
         	canAduioPlay()
+            setInfo(num)
         })
 	})
 
